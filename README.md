@@ -7,4 +7,4 @@ Run with:
 =========
 	qemu-system-arm -M versatilepb -cpu arm1176 -nographic -kernel kernel.elf
 
-kill QEMU with <C-a> x
+kill QEMU with `<C-a> x`
