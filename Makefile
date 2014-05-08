@@ -5,8 +5,10 @@ LD=arm-none-eabi-ld
 CCFLAGS=-march=armv6
 LDFLAGS=-N -Ttext=0x10000
 
-all: test.s
-	$(CC) $(CCFLAGS) -o kernel.o -c test.s
+SOURCE=test.s
+
+all: $(SOURCE)
+	$(CC) $(CCFLAGS) -o kernel.o -c $(SOURCE)
 	$(LD) $(LDFLAGS) -o kernel.elf kernel.o
 
 clean:
